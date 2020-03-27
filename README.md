@@ -5,7 +5,16 @@ Students Rest API and simple React UI
 # Author
 Mario Lyon
 
-#Running
+
+# Prerequisites
+Node, Yarn, and Python3 
+
+# Installation
+```bash
+./build-all.sh 
+```
+
+# Running
 ```bash
 docker-compose up
 ```
