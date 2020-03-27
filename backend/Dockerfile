@@ -1,3 +1,8 @@
+FROM python:alpine
+
+RUN apk add --no-cache --virtual .build-deps gcc musl-dev && pip install cython && apk del .build-deps gcc musl-dev
+RUN apk add --no-cache --update python3-dev  gcc build-base
+
 RUN adduser -D studentsapp
 
 WORKDIR /home/studentsapp
