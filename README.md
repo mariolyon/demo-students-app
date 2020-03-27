@@ -9,6 +9,7 @@ Node, Yarn, and Python3
 
 # Running
 ```bash
+docker login docker.pkg.github.com -u mariolyon -p $GITHUB_PACKAGE_READER_TOKEN
 docker-compose up
 ```
 This will pull the published students-backend and students-frontend dockers images from github.
