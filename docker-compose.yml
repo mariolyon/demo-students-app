@@ -1,11 +1,10 @@
 version: "3.2"
 services:
   backend:
-    build: backend
+    image: docker.pkg.github.com/mariolyon/students/students-backend:latest
     ports:
       - 5000:5000
   frontend:
-    build: frontend
+    build: docker.pkg.github.com/mariolyon/students/students-frontend:latest
     ports:
       - 3000:3000
-    restart: "no"
