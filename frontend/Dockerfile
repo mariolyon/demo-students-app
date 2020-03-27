@@ -1,12 +1,8 @@
 FROM node:latest
-
-WORKDIR /app
-
-ENV PATH /app/node_modules/.bin:$PATH
-
 RUN yarn global add serve
 
-COPY build /app
+WORKDIR /app
+COPY build ./build
 
 EXPOSE 3000
-CMD ["serve", "-s", "build", "-l", "3000"]
+CMD ["serve", "-s", "/app/build", "-l", "3000"]
