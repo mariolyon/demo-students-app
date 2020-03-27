@@ -14,8 +14,8 @@ RUN venv/bin/pip install gunicorn
 
 COPY app app
 COPY migrations migrations
-COPY students.py config.py boot.sh ./
-RUN chmod +x boot.sh
+COPY students.py config.py docker-boot.sh ./
+RUN chmod +x docker-boot.sh
 
 ENV FLASK_APP students.py
 
@@ -23,4 +23,4 @@ RUN chown -R studentsapp:studentsapp ./
 USER studentsapp
 
 EXPOSE 5000
-ENTRYPOINT ["./boot.sh"]
+ENTRYPOINT ["./docker-boot.sh"]
